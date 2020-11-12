@@ -1,5 +1,5 @@
-import styled from "styled-components";
+import Tags from "../src/Home/Tags";
 
-export default function Home() {
-  return <h1>Hello</h1>;
+export default function index() {
+  return <Tags />;
 }

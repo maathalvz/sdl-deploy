@@ -2,8 +2,28 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
+@font-face {
+    font-family: "geo";
+    src: url('/assets/fonts/geomanist-regular-webfont.ttf');
+}
 
 
+:root{
+
+
+    
+
+    --black: #000000;
+    --white:#ffffff;
+    --hover:#595959;
+}
+
+*{
+    margin:0;
+    padding:0;
+
+   
+}
 
 *,html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -17,8 +37,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
-    margin:0;
-    padding:0;
+   
     border:0;
     outline:0;
     box-sizing:border-box;
@@ -26,7 +45,7 @@ time, mark, audio, video {
     vertical-align:baseline;
     background:transparent;
     -webkit-font-smoothing: antialiased !important;
-    color:#202020;
+
     font-weight:400;
     text-rendering:geometricPrecision;
  
@@ -34,10 +53,11 @@ time, mark, audio, video {
 
 body {
     line-height:1;
-    font-family: 'Source Sans Pro', sans-serif;
-    background:#fefefe;
+    font-family: 'Nunito', sans-serif;
+    background:var(--black);
     min-height:100vh;
-   
+    color:var(--white);
+    height:100vh;
 
 }
 
@@ -78,6 +98,10 @@ a {
     text-decoration:none;
     vertical-align:baseline;
     background:transparent;
+
+    &:hover{
+        color:var(--hover);
+    }
 }
 
 /* change colours to suit your needs */
@@ -127,8 +151,6 @@ input, select {
     cursor: pointer;
   }
 
-h1,h2,h3,h4{
-    font-family: 'Orbitron', sans-serif;
-}
+
   
 `;
